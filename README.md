@@ -1,4 +1,4 @@
-# vscode-styled-components
+# vscode-astroturf
 
 Syntax highlighting and IntelliSense for [styled-components](https://github.com/styled-components/styled-components).
 
