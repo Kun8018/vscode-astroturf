@@ -3,8 +3,7 @@
   "displayName": "vscode-astroturf",
   "description": "Syntax highlighting for astroturf",
   "version": "0.0.26",
-  "publisher": "jpoissonnier",
-  "icon": "logo.png",
+  "publisher": "monasticpanic",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
       {
         "id": "source.css.styled",
         "aliases": [
-          "CSS (Styled Components)"
+          "CSS (Astroturf)"
         ],
         "configuration": "./css.styled.configuration.json"
       }
@@ -49,7 +48,7 @@
         "scopeName": "styled",
         "path": "./syntaxes/astroturf.json",
         "embeddedLanguages": {
-          "source.css.scss": "css",
+          "source.css.scss": "scss",
           "meta.embedded.line.ts": "typescript"
         }
       }

@@ -1,8 +1,6 @@
 # vscode-astroturf
 
-Syntax highlighting and IntelliSense for [styled-components](https://github.com/styled-components/styled-components).
-
-![Syntax highlighting in action](demo.png)
+Syntax highlighting and IntelliSense for [astroturf](https://github.com/4Catalyzer/astroturf).
 
 Uses a CSS grammar built on top of [language-sass](https://github.com/atom/language-sass) and [language-css](https://github.com/atom/language-css).
 
@@ -11,12 +9,10 @@ Uses a CSS grammar built on top of [language-sass](https://github.com/atom/langu
 Inside VSCode, press `Ctrl+P`, and enter:
 
 ```
-ext install vscode-styled-components
+ext install vscode-astroturf
 ```
 
 It should be the top result.
-
-[[Source](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)]
 
 ## Features
 

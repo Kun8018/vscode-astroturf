@@ -63,6 +63,9 @@
 			"include": "#at_rule_supports"
 		},
 		{
+			"include": "#at_rule_value"
+		},
+		{
 			"match": ";",
 			"name": "punctuation.terminator.rule.css"
 		},
@@ -71,6 +74,104 @@
     }
 	],
 	"repository": {
+		"composes": {
+      "captures": {
+        "1": {
+          "name": "support.type.property-name.sass"
+        },
+        "2": {
+          "patterns": [
+            {
+              "match": "(from\\b)",
+              "name": "keyword.control.css.sass"
+            },
+            {
+							"include": "#string_single"
+						},
+						{
+							"include": "#string_double"
+						},
+						{
+							"include": "#interpolation"
+						},
+						{
+							"include": "#js_interpolation"
+						},
+            {
+              "match": "([A-Za-z-_]+)\\b",
+              "name": "meta.property-value.css.sass"
+            }
+          ]
+        }
+      },
+      "match": "\\b(composes)\\b(.+)(?=$)"
+    },
+    "at_rule_value": {
+      "begin": "\\s*((@)value\\b)\\s*",
+      "captures": {
+        "1": {
+          "name": "keyword.control.at-rule.value.css.sass"
+        },
+        "2": {
+          "name": "punctuation.definition.keyword.css.sass"
+        }
+      },
+      "end": "\\s*((?=$))",
+      "name": "meta.at-rule.value.sass",
+      "patterns": [
+        {
+          "match": "([A-Za-z-_]+\\b)(?=.*(?:from|:))",
+          "name": "variable.css.sass"
+        },
+        {
+          "begin": "(:)\\s*",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.seperator.key-value.css.sass"
+            }
+          },
+          "end": "\\s*((?=$))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.terminator.rule.css.sass"
+            }
+          },
+          "name": "meta.property-value.css.sass",
+          "patterns": [
+            {
+							"include": "#string_single"
+						},
+						{
+							"include": "#string_double"
+						},
+						{
+							"include": "#property_values"
+						},
+						{
+							"include": "#interpolation"
+						},
+						{
+							"include": "#js_interpolation"
+						}
+          ]
+        },
+        {
+          "match": ",",
+          "name": "punctuation.separator.key.sass"
+        },
+        {
+          "match": "(from\\b)",
+          "name": "keyword.control.sass"
+        },
+        {
+          "include": "source.css.styled#double-quoted"
+        },
+        {
+          "include": "source.css.styled#single-quoted"
+        }
+      ]
+		},
+
 		"at_rule_charset": {
 			"begin": "\\s*((@)charset\\b)\\s*",
 			"captures": {
@@ -1216,6 +1317,9 @@
 		},
 		"properties": {
 			"patterns": [
+				{
+					"include": "#composes"
+				},
 				{
 					"begin": "(?<![-a-z])(?=[-a-z])",
 					"end": "$|(?![-a-z])",
