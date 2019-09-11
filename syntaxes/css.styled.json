@@ -71,7 +71,10 @@
 		},
 		{
       "include": "#properties"
-    }
+		},
+		{
+			"include": "#module_pseudo_classes"
+		}
 	],
 	"repository": {
 		"composes": {
@@ -83,6 +86,10 @@
           "patterns": [
             {
               "match": "(from\\b)",
+              "name": "keyword.control.css.sass"
+						},
+						{
+              "match": "(\\bglobal)",
               "name": "keyword.control.css.sass"
             },
             {
@@ -170,6 +177,18 @@
           "include": "source.css.styled#single-quoted"
         }
       ]
+		},
+		"module_pseudo_classes": {
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.entity.css"
+				},
+				"2": {
+					"name": "invalid.illegal.colon.css"
+				}
+			},
+			"match": "(?xi)\n(:)(:*)\n(?: export|import)(?![\\w-]|\\s*[;}])",
+			"name": "entity.other.attribute-name.pseudo-class.css"
 		},
 
 		"at_rule_charset": {
@@ -1317,6 +1336,9 @@
 		},
 		"properties": {
 			"patterns": [
+				{
+					"include": "#module_pseudo_classes"
+				},
 				{
 					"include": "#composes"
 				},
