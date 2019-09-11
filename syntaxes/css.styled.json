@@ -90,7 +90,7 @@
 						},
 						{
               "match": "(\\bglobal)",
-              "name": "keyword.control.css.sass"
+              "name": "support.constant.property-value.css"
             },
             {
 							"include": "#string_single"
@@ -106,7 +106,7 @@
 						},
             {
               "match": "([A-Za-z-_]+)\\b",
-              "name": "meta.property-value.css.sass"
+              "name": "entity.other.attribute-name.class.css"
             }
           ]
         }
@@ -188,7 +188,7 @@
 				}
 			},
 			"match": "(?xi)\n(:)(:*)\n(?: export|import)(?![\\w-]|\\s*[;}])",
-			"name": "entity.other.attribute-name.pseudo-class.css"
+			"name": "keyword.control.css.sass"
 		},
 
 		"at_rule_charset": {

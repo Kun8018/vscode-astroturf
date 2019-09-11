@@ -1,11 +1,7 @@
 const Component = styled(Component)`
   @value col: #foo;
 
-  :export {
-
-  }
-
-  composes: ${styles.boo} from './bar.scss';
+  composes: fsf fsfs ${styles.boo} from './bar.scss';
   composes: ${styles.boo} from global;
 
   color: #ebebeb;
