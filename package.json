@@ -2,7 +2,7 @@
   "name": "vscode-astroturf",
   "displayName": "vscode-astroturf",
   "description": "Syntax highlighting for astroturf",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "monasticpanic",
   "license": "MIT",
   "repository": {
