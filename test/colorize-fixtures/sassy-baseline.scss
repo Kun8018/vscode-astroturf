@@ -1,0 +1,16 @@
+
+.baz {
+  color: red;
+
+  @each $foo, $bar in $baz {
+    .baz {
+      color: $bar;
+    }
+  }
+
+  color: red;
+}
+
+.foo {
+  color: red;
+}
