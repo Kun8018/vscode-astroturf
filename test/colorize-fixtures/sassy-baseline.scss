@@ -1,7 +1,8 @@
 
-.baz {
-  color: red;
 
+.baz {
+
+  color: red;
   @each $foo, $bar in $baz {
     .baz {
       color: $bar;
