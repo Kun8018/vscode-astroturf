@@ -1,9 +1,14 @@
 {
   "name": "vscode-astroturf",
-  "displayName": "vscode-astroturf",
+  "displayName": "astroturf",
   "description": "Syntax highlighting for astroturf",
   "version": "0.4.0",
   "publisher": "monasticpanic",
+  "icon": "logo.png",
+  "galleryBanner": {
+    "color": "#73CEA8",
+    "theme": "light"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -28,6 +33,27 @@
           "CSS (Astroturf)"
         ],
         "configuration": "./css.styled.configuration.json"
+      },
+      {
+        "id": "jsonc",
+        "filenames": [
+          ".astroturfrc",
+          ".astroturfrc.json"
+        ]
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": ".astroturfrc",
+        "url": "./options.schema.json"
+      },
+      {
+        "fileMatch": ".astroturfrc.json",
+        "url": "./options.schema.json"
+      },
+      {
+        "fileMatch": "package.json",
+        "url": "./package-json.schema.json"
       }
     ],
     "grammars": [

@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "allowGlobal": {
+      "type": "boolean"
+    },
+    "configFile": {
+      "type": ["string", "boolean"]
+    },
+    "cssTagName": {
+      "anyOf": [
+        {
+          "enum": [false],
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "enableCssProp": {
+      "type": "boolean"
+    },
+    "enableDynamicInterpolations": {
+      "enum": ["cssProp", false, true]
+    },
+    "experiments": {
+      "properties": {
+        "modularCssExternals": {
+          "type": "boolean"
+        },
+        "selfCompile": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "extension": {
+      "type": "string"
+    },
+    "generateInterpolations": {
+      "type": "boolean"
+    },
+    "getFileName": {
+      "type": "object"
+    },
+    "getRequirePath": {
+      "type": "object"
+    },
+    "noWarnings": {
+      "type": "boolean"
+    },
+    "resolveDependency": {
+      "type": "object"
+    },
+    "styledTagName": {
+      "anyOf": [
+        {
+          "enum": [false],
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "stylesheetTagName": {
+      "anyOf": [
+        {
+          "enum": [false],
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "writeFiles": {
+      "type": "boolean"
+    }
+  },
+  "type": "object"
+}
